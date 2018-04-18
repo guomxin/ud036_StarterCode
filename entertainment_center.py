@@ -28,9 +28,9 @@ movie_info_list = [
 ]
 
 def get_movies(movie_list):
-    # 把电影信息转换为Movie对象列表
-    # 输入为电影信息嵌套列表，输出为对应的Movie对象列表
+    # 返回的movie对象列表
     result = []
+    # 基于每项电影信息生成对应的Movie对象，并放入列表中
     for title, poster_image_url, trailer_youtube_url in movie_list:
         result.append(media.Movie(title, poster_image_url, trailer_youtube_url))
     return result
